@@ -6,42 +6,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- CSS -->
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5{font-family: "Raleway", sans-serif}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 </style>
+<!-- End CSS -->
 </head>
 <body class="w3-light-grey">
 
-<!-- Sidebar/menu -->
+<!-- Sidebar menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
   <a href="#accueil" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a> 
   <a href="#propos" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">A PROPOS</a></nav>
 
-<!-- Top menu on small screens -->
+<!-- Le dessus du menu en mini -->
 <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding">SARA MANOHARAN PHOTOGRAPHIE</span>
+  <span class="w3-left w3-padding ">SARA MANOHARAN PHOTOGRAPHIE</span>
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
- 
   <!-- Photo grid -->
   <div class="w3-row " id="accueil">
     <div class="w3-quarter"><!-- Partie 1 -->
-     <img src="museelouvre.jpg" style="width:90%" onclick="onClick(this)" alt="Un homme en train de dessiner la statue - Musée du Louvre, Paris"><br>
+      <img src="museelouvre.jpg" style="width:90%" onclick="onClick(this)" alt="Un homme en train de dessiner la statue - Musée du Louvre, Paris"><br>
       <img src="museelouvre1.jpg" style="width:90%" onclick="onClick(this)" alt="Le tableau représentant La tentation du Christ. 1850 / 1875 (3e quart du XIXe siècle). De Scheffer, Ary - Musée du Louvre, Paris "><br>
       <img src="museelouvre2.jpg" style="width:90%" onclick="onClick(this)" alt="Plafond d'un escalier - Musée du Louvre, Paris"><br>
       <img src="museelouvre3.jpg" style="width:90%" onclick="onClick(this)" alt="Le Louvre à travers une fenêtre du musée - Paris"><br>
       <img src="paris.jpg" style="width:90%" onclick="onClick(this)" alt="La photo de la Tour Eiffle a été prise d'en haut de l'Arc de Triomphe - Paris "><br>
-   </div>
+    </div>
     
-   <div class="w3-quarter"><!-- Partie 2 -->
+    <div class="w3-quarter"><!-- Partie 2 -->
       <img src="ciel.jpg" style="width:90%" onclick="onClick(this)" alt="Lever de soleil"><br>
       <img src="ciel1.jpg" style="width:90%" onclick="onClick(this)" alt="Le ciel dans une journée normale"><br>
       <img src="ciel2.jpg" style="width:90%" onclick="onClick(this)" alt="Coucher de soleil"><br>
@@ -64,10 +62,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <img src="avion1.jpg" style="width:90%" onclick="onClick(this)" alt="Le Bleriot XI - Musée Volant Salis"><br>
       <img src="ciel5.jpg" style="width:90%" onclick="onClick(this)" alt="Un arc-en-ciel après une grosse pluie - Massy"><br>
     </div>
-
   </div>
   <br>
-  <!-- Modal for full size images on click-->
+
+  <!-- Qui permet d'afficher la photo en plus grand quand tu click dessus-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -76,7 +74,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
   <!-- A propos section -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="propos">
+  <div class="w3-container w3-dark-gray w3-center w3-text-light-grey w3-padding-32" id="propos">
     <h4><b>A Propos</b></h4>
     <img src="Sphoto.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
     <div class="w3-content w3-justify" style="max-width:600px">
@@ -88,7 +86,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
   <!-- End A propos section -->  
-  <div class="w3-black w3-center w3-padding-24">Powered by Sara Manoharan</div>
+  <div class="w3-light-grey w3-center w3-padding-24">&copy; Sara Manoharan</div>
 <!-- End page content -->
 </div>
 <script>
