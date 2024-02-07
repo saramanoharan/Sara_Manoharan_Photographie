@@ -9,21 +9,19 @@
 <!-- CSS -->
 <style>
 body,h1,h2,h3,h4,h5{font-family: "Raleway", sans-serif}
-.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img{margin-bottom: 0px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 .search-bar {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
 }
-
 .search-input {
   width: 40%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .search-button {
   background-color: #cd96e2;
   color: white;
@@ -32,34 +30,28 @@ body,h1,h2,h3,h4,h5{font-family: "Raleway", sans-serif}
   border-radius: 5px;
   cursor: pointer;
 }
-a{
-    text-decoration: none;
-}
+a{text-decoration: none;}
 </style>
 <!-- End CSS -->
 </head>
 <body class="w3-light-grey">
-
 <!-- Sidebar menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
   <a href="#accueil" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a> 
   <a href="#propos" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">A PROPOS</a></nav>
-
 <!-- Le dessus du menu en mini -->
 <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-    <a class="w3-left w3-padding "  href="index.html">SARA MANOHARAN PHOTOGRAPHIE</a>
+    <a class="w3-left w3-padding " href="index2.html">SARA MANOHARAN PHOTOGRAPHIE</a>
     <div class="search-bar">
         <input type="text" class="search-input" id="search-keyword" placeholder="Rechercher une image">
         <button class="search-button" onclick="searchImages()">Rechercher</button>
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </div>
 </header>
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
-  
   <!-- Photo grid -->
-  <div class="w3-row " id="accueil">
+  <div class="w3-row" id="accueil">
     <div class="w3-quarter"><!-- Partie 1 -->
       <img class="w3-image" src="museelouvre.jpg"  style="width:90%" onclick="onClick(this)" alt="Un visiteur dessine la statue 'Éros bandant son arc' au Musée du Louvre à Paris. Croquis, croquis, Art, art, Sculpture, sculpture. Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre."><br>
       <img class="w3-image" src="museelouvre1.jpg" style="width:90%" onclick="onClick(this)" alt="Le tableau représentant 'La tentation du Christ' au Musée du Louvre à Paris. 1850 / 1875 (3e quart du XIXe siècle). De Scheffer, Ary. Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre."><br>
@@ -93,7 +85,6 @@ a{
     </div>
   </div>
   <br>
-
   <!-- Qui permet d'afficher la photo en plus grand quand tu click dessus-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -109,7 +100,7 @@ a{
     <div class="w3-content w3-justify" style="max-width:600px">
       <p>
         Bienvenue sur mon site de photographie ! Je suis Sara Manoharan J., une photographe passionnée par l'art de capturer des émotions, des détails, la nature, des lumières et des ambiances qui rendent chaque photo unique.<br>
-        Sur ce site, vous trouverez une sélection de mes meilleures photographies. N'hésitez pas à parcourir mes galeries.
+        Sur ce site, vous trouverez une sélection de mes meilleures photographies. N'hésitez pas à parcourir le site.
       </p>
       </div>
     </div>
@@ -135,30 +126,18 @@ function onClick(element) {
 //   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
-
-// Script to open and close sidebar
-// ... (votre code pour la sidebar)
-
-// Modal Image Gallery
-// ... (votre code pour la galerie modale)
-
 function searchImages() {
   // Récupérer le mot-clé saisi
   const keyword = document.getElementById("search-keyword").value;
-
   // Filtrer les photos en fonction du mot-clé
   const allImages = document.querySelectorAll(".w3-row img"); // Récupérer toutes les images
   const filteredImages = Array.from(allImages).filter(image => image.alt.includes(keyword));
-
   // Afficher les photos correspondantes
   displayImages(filteredImages);
 }
-
 function displayImages(images) {
   const photoGrid = document.querySelector(".w3-row");
   photoGrid.innerHTML = ""; // Effacer le contenu actuel
-
   images.forEach(image => {
     const imgElement = document.createElement("img");
     imgElement.classList.add("w3-image");
@@ -166,15 +145,12 @@ function displayImages(images) {
     imgElement.alt = image.alt;
     imgElement.style.width = "90%";
     imgElement.onclick = () => onClick(imgElement); // Attribution du clic pour la galerie modale
-
     const divElement = document.createElement("div");
     divElement.classList.add("w3-quarter");
     divElement.appendChild(imgElement);
-
     photoGrid.appendChild(divElement);
   });
 }
 </script>
-
 </body>
 </html>
