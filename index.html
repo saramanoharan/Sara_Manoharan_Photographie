@@ -11,6 +11,27 @@
 body,h1,h2,h3,h4,h5{font-family: "Raleway", sans-serif}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: #cd96e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 </style>
 <!-- End CSS -->
 </head>
@@ -23,53 +44,58 @@ body,h1,h2,h3,h4,h5{font-family: "Raleway", sans-serif}
 
 <!-- Le dessus du menu en mini -->
 <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding ">SARA MANOHARAN PHOTOGRAPHIE</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    <a class="w3-left w3-padding "  href="#">SARA MANOHARAN PHOTOGRAPHIE</a>
+    <div class="search-bar">
+        <input type="text" class="search-input" id="search-keyword" placeholder="Rechercher une image">
+        <button class="search-button" onclick="searchImages()">Rechercher</button>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </div>
 </header>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
   <!-- Photo grid -->
   <div class="w3-row " id="accueil">
     <div class="w3-quarter"><!-- Partie 1 -->
-      <img src="museelouvre.jpg" style="width:90%" onclick="onClick(this)" alt="Un homme en train de dessiner la statue - Musée du Louvre, Paris"><br>
-      <img src="museelouvre1.jpg" style="width:90%" onclick="onClick(this)" alt="Le tableau représentant La tentation du Christ. 1850 / 1875 (3e quart du XIXe siècle). De Scheffer, Ary - Musée du Louvre, Paris "><br>
-      <img src="museelouvre2.jpg" style="width:90%" onclick="onClick(this)" alt="Plafond d'un escalier - Musée du Louvre, Paris"><br>
-      <img src="museelouvre3.jpg" style="width:90%" onclick="onClick(this)" alt="Le Louvre à travers une fenêtre du musée - Paris"><br>
-      <img src="paris.jpg" style="width:90%" onclick="onClick(this)" alt="La photo de la Tour Eiffle a été prise d'en haut de l'Arc de Triomphe - Paris "><br>
+      <img class="w3-image" src="museelouvre.jpg"  style="width:90%" onclick="onClick(this)" alt="Un visiteur dessine la statue 'Éros bandant son arc' au Musée du Louvre à Paris. Croquis, croquis, Art, art, Sculpture, sculpture. Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre."><br>
+      <img class="w3-image" src="museelouvre1.jpg" style="width:90%" onclick="onClick(this)" alt="Le tableau représentant 'La tentation du Christ' au Musée du Louvre à Paris. 1850 / 1875 (3e quart du XIXe siècle). De Scheffer, Ary. Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre."><br>
+      <img class="w3-image" src="museelouvre2.jpg" style="width:90%" onclick="onClick(this)" alt="Plafond d'un escalier au Musée du Louvre à Paris. Architecture, art. Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre, France."><br>
+      <img class="w3-image" src="museelouvre3.jpg" style="width:90%" onclick="onClick(this)" alt="Vue de la pyramide du Louvre depuis une fenêtre du musée, Paris. Architecture, architecture, Art, art, Pyramide, pyramide.  Musée du Louvre, Musée, musée du louvre, musée, louvre, Louvre, paris, Paris, Palais du Louvre, palais du louvre."><br>
+      <img class="w3-image" src="paris.jpg"        style="width:90%" onclick="onClick(this)" alt="Vue panoramique de la Tour Eiffel depuis l'Arc de Triomphe à Paris. Tour Eiffel, tour eiffel, paris, Paris, Arc de Triomphe, arc de triomphe, vue panoramique, Vue Panoramique."><br>
     </div>
     
     <div class="w3-quarter"><!-- Partie 2 -->
-      <img src="ciel.jpg" style="width:90%" onclick="onClick(this)" alt="Lever de soleil"><br>
-      <img src="ciel1.jpg" style="width:90%" onclick="onClick(this)" alt="Le ciel dans une journée normale"><br>
-      <img src="ciel2.jpg" style="width:90%" onclick="onClick(this)" alt="Coucher de soleil"><br>
-      <img src="ciel3.jpg" style="width:90%" onclick="onClick(this)" alt="La lune brillante un petit matin"><br>
-      <img src="paris1.jpg" style="width:90%" onclick="onClick(this)" alt="La photo de la Tour Eiffle a été prise du Pont du Garigliano - Paris"><br>
+      <img class="w3-image" src="ciel.jpg" style="width:90%" onclick="onClick(this)" alt="Lever de soleil, matin, ciel rose et bleu, ciel rose, ciel bleu, ciel, Ciel, Vitry-sur-Seine, Vitry"><br>
+      <img class="w3-image" src="ciel1.jpg" style="width:90%" onclick="onClick(this)" alt="Journée, ciel, Ciel, ciel gris et beige, ciel gris, ciel beige, Vitry-sur-Seine, Vitry"><br>
+      <img class="w3-image" src="ciel2.jpg" style="width:90%" onclick="onClick(this)" alt="Coucher de soleil, soir, nuit, fin de journée, ciel, Ciel, ciel, ciel chaleureux, ciel rose, ciel jaune, ciel orange, ciel violet, Vitry-sur-Seine, Vitry"><br>
+      <img class="w3-image" src="ciel3.jpg" style="width:90%" onclick="onClick(this)" alt="La lune un petit matin, Lune, lune, nuit, soir, fin de journée, Vitry-sur-Seine, Vitry, ciel bleu, ciel bleu foncé."><br>
+      <img class="w3-image" src="paris1.jpg" style="width:90%" onclick="onClick(this)" alt="Tour Eiffle, tour eiffel, a été prise du Pont du Garigliano à Paris, paris, pont du garigliano."><br>
     </div>
     
     <div class="w3-quarter"><!-- Partie 3 -->
-      <img src="parc.jpg" style="width:90%" onclick="onClick(this)" alt="Petit Jardin - Boulogne-Billancourt"><br>
-      <img src="parc1.jpg" style="width:90%" onclick="onClick(this)" alt="Fontaine avec une verrière à l'arrière - Boulogne-Billancourt"><br>
-      <img src="parc3.jpg" style="width:90%" onclick="onClick(this)" alt=""><br>
-      <img src="parc4.jpg" style="width:90%" onclick="onClick(this)" alt=""><br>
-      <img src="ciel4.jpg" style="width:90%" onclick="onClick(this)" alt="Un ciel bleu foncé avec la lune brillante un matin - Cité Universitaire, Paris"><br>
-      <img src="mlk.jpg" style="width:90%" onclick="onClick(this)" alt="L'avenir est porteur d'espoir. Le présent est porteur de puissance. John Maxwell - Eglise Martin Luther King (Grand Paris), Créteil"><br>
+      <img class="w3-image" src="parc.jpg" style="width:90%" onclick="onClick(this)" alt="Jardin, jardin, Parc, parc, nature, Nature, Boulogne-Billancourt, boulogne-billancourt, Boulogne Billancourt, boulogne billancourt,"><br>
+      <img class="w3-image" src="parc1.jpg" style="width:90%" onclick="onClick(this)" alt="Jardin, jardin, Parc, parc, verrière, Verrière, Boulogne-Billancourt, boulogne-billancourt, Boulogne Billancourt, boulogne billancourt"><br>
+      <img class="w3-image" src="parc3.jpg" style="width:90%" onclick="onClick(this)" alt="blanc, Blanc, Aesthetic, aesthetic, fausse plante, Fausse Plante, Décoration, Déco, décoration, Décoration intérieure, Décoration Intérieure, décoration intérieure"><br>
+      <img class="w3-image" src="parc4.jpg" style="width:90%" onclick="onClick(this)" alt="Ombre, ombre."><br>
+      <img class="w3-image" src="ciel4.jpg" style="width:90%" onclick="onClick(this)" alt="La lune un petit matin, Lune, lune, début de journée, Cité-Universitaire, Cité U, cité-universitaire, ciel bleu foncé."><br>
+      <img class="w3-image" src="mlk.jpg" style="width:90%" onclick="onClick(this)" alt="John Maxwell, citation, Citation, Eglise Martin Luther King Grand Paris, Créteil, créteil, MLK, mlk, église"><br>
     </div>
 
     <div class="w3-quarter"><!-- Partie 4 -->
-      <img src="train.jpg" style="width:90%" onclick="onClick(this)" alt="Le métro, Paris"><br>
-      <img src="avion2.jpg" style="width:90%" onclick="onClick(this)" alt="Le fameux Boeing B-17, Pink Lady - Musée Volant Salis "><br>
-      <img src="avion1.jpg" style="width:90%" onclick="onClick(this)" alt="Le Bleriot XI - Musée Volant Salis"><br>
-      <img src="ciel5.jpg" style="width:90%" onclick="onClick(this)" alt="Un arc-en-ciel après une grosse pluie - Massy"><br>
+      <img class="w3-image" src="train.jpg" style="width:90%" onclick="onClick(this)" alt="Métro, métro, aesthetic, Aesthetic"><br>
+      <img class="w3-image" src="avion2.jpg" style="width:90%" onclick="onClick(this)" alt="Boeing B-17, Pink Lady, Musée Volant Salis, musée volant salis, Avion, avion. "><br>
+      <img class="w3-image" src="avion1.jpg" style="width:90%" onclick="onClick(this)" alt="Le Bleriot XI, Musée Volant Salis, musée volant salis, Avion, avion."><br>
+      <img class="w3-image" src="ciel5.jpg" style="width:90%" onclick="onClick(this)" alt="arc-en-ciel, Arc-en-ciel, grosse pluie, Massy, massy."><br>
     </div>
   </div>
   <br>
 
   <!-- Qui permet d'afficher la photo en plus grand quand tu click dessus-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
+      <img id="img01" class="w3-image" style="width: 60%; height: 30%;">
       <p id="caption"></p>
     </div>
   </div>
@@ -103,9 +129,49 @@ function w3_close() {
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
+//   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+
+// Script to open and close sidebar
+// ... (votre code pour la sidebar)
+
+// Modal Image Gallery
+// ... (votre code pour la galerie modale)
+
+function searchImages() {
+  // Récupérer le mot-clé saisi
+  const keyword = document.getElementById("search-keyword").value;
+
+  // Filtrer les photos en fonction du mot-clé
+  const allImages = document.querySelectorAll(".w3-row img"); // Récupérer toutes les images
+  const filteredImages = Array.from(allImages).filter(image => image.alt.includes(keyword));
+
+  // Afficher les photos correspondantes
+  displayImages(filteredImages);
+}
+
+function displayImages(images) {
+  const photoGrid = document.querySelector(".w3-row");
+  photoGrid.innerHTML = ""; // Effacer le contenu actuel
+
+  images.forEach(image => {
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("w3-image");
+    imgElement.src = image.src;
+    imgElement.alt = image.alt;
+    imgElement.style.width = "90%";
+    imgElement.onclick = () => onClick(imgElement); // Attribution du clic pour la galerie modale
+
+    const divElement = document.createElement("div");
+    divElement.classList.add("w3-quarter");
+    divElement.appendChild(imgElement);
+
+    photoGrid.appendChild(divElement);
+  });
+}
 </script>
+
 </body>
 </html>
